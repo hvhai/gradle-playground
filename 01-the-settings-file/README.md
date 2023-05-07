@@ -20,3 +20,22 @@
 - Gradle Core Plugin -> java-library
 - Community plugin with own version -> org.jetbrains.kotlin.jvm version "1.5.21"
 - Locally defined plugin -> my-java-library
+
+##  04 – Tasks
+
+* [Executing Tasks in Multi-Project Builds](https://docs.gradle.org/current/userguide/intro_multi_project_builds.html#sec:executing_tasks_by_fully_qualified_name)
+* [Lifecycle Tasks](https://docs.gradle.org/current/userguide/more_about_tasks.html#sec:lifecycle_tasks)
+* [Task Outcomes (UP-TO-DATE, FROM-CACHE, ...)](https://docs.gradle.org/current/userguide/more_about_tasks.html#sec:task_outcomes)
+* [Tasks added by the Base Plugin](https://docs.gradle.org/current/userguide/base_plugin.html#sec:base_tasks)
+* [Tasks added by the Java Plugin](https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_tasks)
+* [Enabling the Build Cache](https://docs.gradle.org/current/userguide/build_cache.html#sec:build_cache_enable)
+* [Remote Build Cache setup](https://docs.gradle.org/current/userguide/build_cache.html#sec:build_cache_setup_http_backend)
+
+
+```shell
+./gradlew :app:tasks
+## reused from previous build run
+./gradlew :app:build --console=plain
+## reused from build cached
+./gradlew :app:build --console=plain --build-cache
+```
