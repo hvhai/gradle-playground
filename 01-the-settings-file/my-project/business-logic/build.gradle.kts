@@ -1,10 +1,10 @@
 plugins {
-    id("java-library")
+    id("my-java-library")
     id("org.jetbrains.kotlin.jvm") version "1.8.21"
 }
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(11))
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
 
 tasks.test {
@@ -12,6 +12,6 @@ tasks.test {
 }
 
 dependencies {
-    implementation(project(":data-model"))
+//    implementation(project(":data-model"))
     implementation("org.apache.commons:commons-lang3:3.9")
 }
